@@ -1,0 +1,149 @@
+main {
+  margin: 0 64px;
+
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+  height: auto;
+
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);
+
+  margin-top: 24px;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 16px;
+
+  color: #808080;
+
+  font-weight: 400;
+}
+
+#--filtros {
+  display: flex;
+  align-items: flex-start;
+}
+
+#--span--filtrar {
+    margin-top: 4px;
+    color: #808080;
+    font-weight: 500;
+}
+
+#--filtros--content {
+  display: flex;
+  align-items: flex-start;
+}
+
+#--filtro--geral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+
+    border-radius: 24px;
+    box-sizing: border-box;
+
+    margin-left: 12px;
+    padding: 5px 20px;
+    border: 2px solid white;
+    font-size: 16px;
+    font-weight: 400;
+
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+    
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+#--filtro--geral:active {
+    border: 2px solid #177BE5;
+    background-color: #177BE520;
+    box-sizing: border-box;
+}
+
+#--select--curso {
+  width: 145px;
+}
+
+#--select--ano {
+  width: 110px;
+}
+
+.--select {
+  margin-left: 12px;
+  
+}
+
+.--select--btn,
+.--options li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.--select--btn {
+  box-sizing: border-box;
+  padding: 4px 16px;
+
+  border-radius: 4px;
+
+  background-color: white;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+}
+
+.fa-angle-down {
+  margin-left: 16px;
+  transition: transform 0.3s linear;
+}
+
+.--select.active .fa-angle-down {
+  transform: rotate(-180deg);
+}
+
+.--content {
+  display: none;
+
+  margin-top: 8px;
+  padding: 12px;
+
+  border-radius: 4px;
+
+  background-color: white;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+}
+
+#--select--curso.active .--content {
+  display: block;
+}
+
+#--select--ano.active .--content {
+  display: block;
+}
+
+.--options li {
+  border-radius: 4px;
+  padding: 0 8px;
+  margin-top: 2px;
+  height: 35px;
+}
+
+.--options li:hover,
+li.selected {
+  background-color: #177BE520;
+}
+
+.fa-angle-down {
+    color: #808080;
+}

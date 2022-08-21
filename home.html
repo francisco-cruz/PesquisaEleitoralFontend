@@ -11,7 +11,51 @@
     ></script>
 
     <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+
+    <script src="./scripts/filterSelect.js" defer></script>
+
     <title>Início</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Bem-vindo(a), Fulano.</h1>
+      <section>
+        <h2>Minha intenção de Voto</h2>
+        <div></div>
+      </section>
+
+      <section>
+        <h2>Estatísticas</h2>
+        <div>grafico</div>
+
+        <div id="--filtros">
+          <span id="--span--filtrar">Filtrar por:</span>
+          <div id="--filtros--content">
+            <button id="--filtro--geral">Geral</button>
+
+            <div class="--select" id="--select--curso">
+              <div class="--select--btn" id="--select--btn--curso">
+                <span class="--default--select">Curso</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="--content" id="--content--curso">
+                <ul class="--options" id="--options--curso"></ul>
+              </div>
+            </div>
+
+            <div class="--select" id="--select--ano">
+              <div class="--select--btn" id="--select--btn--ano">
+                <span class="--default-select" >Ano</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="--content" id="--content--ano">
+                <ul class="--options" id="--options--ano"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

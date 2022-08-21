@@ -39,20 +39,20 @@ span {
   transition: font-size 0.5s;
 }
 
-p {
-  font-size: 20px;
-  color: #808080;
-  margin-top: 16px;
-
-  transition: font-size 0.5s;
-}
-
 #--icon--lock {
   color: #a6a6a698;
 
   margin-right: 6px;
 
   width: 16px;
+}
+
+p {
+  font-size: 20px;
+  color: #808080;
+  margin-top: 16px;
+
+  transition: font-size 0.5s;
 }
 
 #--button--acessar {
@@ -80,7 +80,7 @@ p {
 #--button--acessar:active {
   box-shadow: 1px 1px 10px rgb(0 0 0 / 20%) inset;
   font-size: 15px;
-  
+
   width: 99%;
 }
 
