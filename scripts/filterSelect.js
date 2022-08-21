@@ -13,7 +13,7 @@ function addCursosInSelect(selectedCurso) {
   cursos.forEach((curso) => {
     let isSelected = curso == selectedCurso ? "selected" : "";
 
-    let cursosList = `<li onclick="updateCurso(this)" class="${isSelected}">${curso}</li>`;
+    let cursosList = `<li onclick="updateCurso(this)" class="--tab--buton ${isSelected}">${curso}</li>`;
     optionsCurso.insertAdjacentHTML("beforeend", cursosList);
   });
 }
@@ -21,6 +21,7 @@ function addCursosInSelect(selectedCurso) {
 addCursosInSelect();
 
 function updateCurso(selectedList) {
+  openGraphic(event, selectedList.innerText);
   selectCurso.classList.remove("active");
   addCursosInSelect(selectedList.innerText);
   selectBtnCurso.firstElementChild.innerText = selectedList.innerText;
@@ -55,3 +56,35 @@ function updateAno(selectedList) {
   addAnosInSelect(selectedList.innerText);
   selectBtnAno.firstElementChild.innerText = selectedList.innerText;
 }
+
+function openGraphic(event, idGraphic) {
+  console.log(idGraphic);
+  addDisplayNoneToAllSelect()
+  removeGraphicVisibleToSelect()
+  addActiveToBtnTab(event, idGraphic)
+
+  
+}
+
+function addDisplayNoneToAllSelect(){
+  let grafico = document.getElementsByClassName('grafico');
+  for (let i = 0; i < grafico.length; i++){
+    grafico[i].style.display = 'none';
+  }
+}
+
+
+
+function removeGraphicVisibleToSelect(){
+    let tabs = document.getElementsByClassName('--tab--button');
+  for (let i = 0; i < tabs.length; i++){
+      tabs[i].className = tabs[i].classList.remove('visible');
+    }
+}
+
+
+function addActiveToBtnTab(event, idGraphic){
+  document.getElementById(idGraphic).style.display = 'block';
+  event.currentTarget.classList.add("visible");
+}
+

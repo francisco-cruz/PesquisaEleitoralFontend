@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/home.css" />
 
-    <script src="./scripts/filterSelect.js" defer></script>
-
     <title>Início</title>
   </head>
   <body>
@@ -27,12 +25,18 @@
 
       <section>
         <h2>Estatísticas</h2>
-        <div>grafico</div>
+        <div class="graficos">
+          <div class="grafico" id="Eletrotécnica">GRAFICO AQUI</div>
+          <div class="grafico" id="Informática">GRAFICO AQUI</div>
+          <div class="grafico" id="Textil">GRAFICO AQUI</div>
+          <div class="grafico" id="Vestuário">GRAFICO AQUI</div>
+        </div>
 
         <div id="--filtros">
           <span id="--span--filtrar">Filtrar por:</span>
           <div id="--filtros--content">
-            <button id="--filtro--geral">Geral</button>
+            
+            <button type="button" id="--filtro--geral" class="--tab--button">Geral</button>
 
             <div class="--select" id="--select--curso">
               <div class="--select--btn" id="--select--btn--curso">
@@ -57,5 +61,9 @@
         </div>
       </section>
     </main>
+
+    <script src="./scripts/filterSelect.js"></script>
+    <script src="./scripts/openGraphics.js"></script>
+
   </body>
 </html>
