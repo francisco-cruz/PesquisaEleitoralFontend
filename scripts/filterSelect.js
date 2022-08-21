@@ -1,3 +1,11 @@
+let filtroPadrao = document.querySelector('#--filtro--geral')
+filtroPadrao.addEventListener('click', () => {
+    console.log(filtroPadrao)
+    filtroPadrao.classList.toggle('active')
+})
+
+
+// Filtrar po Curso
 const selectCurso = document.querySelector("#--select--curso");
 const selectBtnCurso = selectCurso.querySelector("#--select--btn--curso");
 const optionsCurso = selectCurso.querySelector("#--options--curso");
@@ -21,14 +29,14 @@ function addCursosInSelect(selectedCurso) {
 addCursosInSelect();
 
 function updateCurso(selectedList) {
+  // Função abrir gráfico
   openGraphic(event, selectedList.innerText);
   selectCurso.classList.remove("active");
   addCursosInSelect(selectedList.innerText);
   selectBtnCurso.firstElementChild.innerText = selectedList.innerText;
 }
 
-// Caixa de seleção por Ano
-
+// filtrar por Ano
 const selectAno = document.querySelector("#--select--ano");
 const selectBtnAno = selectAno.querySelector("#--select--btn--ano");
 const optionsAno = selectAno.querySelector("#--options--ano");
@@ -44,7 +52,7 @@ function addAnosInSelect(selectedAno) {
   anos.forEach((ano) => {
     let isSelected = ano == selectedAno ? "selected" : "";
 
-    let anosList = `<li onclick="updateAno(this)" class="${isSelected}">${ano}</li>`;
+    let anosList = `<li onclick="updateAno(this)" class="--tab--buton ${isSelected}">${ano}</li>`;
     optionsAno.insertAdjacentHTML("beforeend", anosList);
   });
 }
@@ -52,39 +60,41 @@ function addAnosInSelect(selectedAno) {
 addAnosInSelect();
 
 function updateAno(selectedList) {
+  openGraphic(event, selectedList.innerText);
   selectAno.classList.remove("active");
   addAnosInSelect(selectedList.innerText);
   selectBtnAno.firstElementChild.innerText = selectedList.innerText;
 }
 
+// Chamando remover gráficos da tela
+addDisplayNoneToAllSelect();
+
+// Fução abrir gráfico
 function openGraphic(event, idGraphic) {
   console.log(idGraphic);
-  addDisplayNoneToAllSelect()
-  removeGraphicVisibleToSelect()
-  addActiveToBtnTab(event, idGraphic)
-
-  
+  addDisplayNoneToAllSelect();
+  removeGraphicVisibleToSelect();
+  addActiveToBtnTab(event, idGraphic);
 }
 
-function addDisplayNoneToAllSelect(){
-  let grafico = document.getElementsByClassName('grafico');
-  for (let i = 0; i < grafico.length; i++){
-    grafico[i].style.display = 'none';
+// Remover todos os gráficos da tela
+function addDisplayNoneToAllSelect() {
+  let graficos = document.getElementsByClassName("grafico");
+  for (let i = 0; i < graficos.length; i++) {
+    graficos[i].style.display = "none";
   }
 }
 
-
-
-function removeGraphicVisibleToSelect(){
-    let tabs = document.getElementsByClassName('--tab--button');
-  for (let i = 0; i < tabs.length; i++){
-      tabs[i].className = tabs[i].classList.remove('visible');
-    }
+// Remover a class visible dos botões
+function removeGraphicVisibleToSelect() {
+  let tabs = document.getElementsByClassName("--tab--button");
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].className = tabs[i].classList.remove("visible");
+  }
 }
 
-
-function addActiveToBtnTab(event, idGraphic){
-  document.getElementById(idGraphic).style.display = 'block';
+// Adicionando class visible no botão clicado
+function addActiveToBtnTab(event, idGraphic) {
+  document.getElementById(idGraphic).style.display = "block";
   event.currentTarget.classList.add("visible");
 }
-
