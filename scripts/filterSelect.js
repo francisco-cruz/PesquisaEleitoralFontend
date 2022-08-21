@@ -1,9 +1,12 @@
-let filtroPadrao = document.querySelector('#--filtro--geral')
-filtroPadrao.addEventListener('click', () => {
-    console.log(filtroPadrao)
-    filtroPadrao.classList.toggle('active')
-})
+// remover todos os gráficos da tela
+addDisplayNoneToAllSelect();
 
+let btnFiltroGeral = document.getElementById("--filtro--geral");
+console.log(btnFiltroGeral);
+btnFiltroGeral.click();
+btnFiltroGeral.addEventListener("click", () => {
+  btnFiltroGeral.classList.add("active");
+});
 
 // Filtrar po Curso
 const selectCurso = document.querySelector("#--select--curso");
@@ -25,7 +28,7 @@ function addCursosInSelect(selectedCurso) {
     optionsCurso.insertAdjacentHTML("beforeend", cursosList);
   });
 }
-
+// add lista de curso no content
 addCursosInSelect();
 
 function updateCurso(selectedList) {
@@ -56,7 +59,7 @@ function addAnosInSelect(selectedAno) {
     optionsAno.insertAdjacentHTML("beforeend", anosList);
   });
 }
-
+// add lista de anos no content
 addAnosInSelect();
 
 function updateAno(selectedList) {
@@ -66,12 +69,38 @@ function updateAno(selectedList) {
   selectBtnAno.firstElementChild.innerText = selectedList.innerText;
 }
 
-// Chamando remover gráficos da tela
-addDisplayNoneToAllSelect();
+// filtrar por Sexo
+const selectSexo = document.querySelector("#--select--sexo");
+const selectBtnSexo = selectSexo.querySelector("#--select--btn--sexo");
+const optionsSexo = selectSexo.querySelector("#--options--sexo");
 
-// Fução abrir gráfico
+let sexos = ["Masculino", "Feminino", "Outros"];
+
+selectBtnSexo.addEventListener("click", () => {
+  selectSexo.classList.toggle("active");
+});
+
+function addASexosInSelect(selectedSexo) {
+  optionsSexo.innerText = "";
+  sexos.forEach((sexo) => {
+    let isSelected = sexo == selectedSexo ? "selected" : "";
+
+    let sexosList = `<li onclick="updateSexo(this)" class="--tab--buton ${isSelected}">${sexo}</li>`;
+    optionsSexo.insertAdjacentHTML("beforeend", sexosList);
+  });
+}
+// add lista de sexos no content
+addASexosInSelect();
+
+function updateSexo(selectedList) {
+  openGraphic(event, selectedList.innerText);
+  selectSexo.classList.remove("active");
+  addASexosInSelect(selectedList.innerText);
+  selectBtnSexo.firstElementChild.innerText = selectedList.innerText;
+}
+
+// Função abrir gráfico
 function openGraphic(event, idGraphic) {
-  console.log(idGraphic);
   addDisplayNoneToAllSelect();
   removeGraphicVisibleToSelect();
   addActiveToBtnTab(event, idGraphic);

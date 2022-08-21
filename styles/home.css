@@ -1,6 +1,6 @@
 main {
-  margin: 0 64px;
-
+  margin: 32px 64px;
+  position: relative;
   min-height: 100vh;
 }
 
@@ -9,20 +9,25 @@ section {
   height: auto;
 
   background-color: white;
-  box-shadow: 1px 1px 5px rgb(0 0 0 / 10%);
+  box-shadow: 1px 1px 5px rgb(41 63 80 / 70% );
 
   margin-top: 24px;
-  border-radius: 4px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+
+h1{
+  color: white;
+}
+
+
 h2 {
   margin-top: 16px;
 
-  color: #808080;
+  color: #293F50 ;
 
   font-weight: 400;
 }
@@ -30,12 +35,13 @@ h2 {
 #--filtros {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 24px;
 }
 
 #--span--filtrar {
-    margin-top: 4px;
-    color: #808080;
-    font-weight: 500;
+  margin-top: 4px;
+  color: #808080;
+  font-weight: 500;
 }
 
 #--filtros--content {
@@ -44,32 +50,32 @@ h2 {
 }
 
 #--filtro--geral {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 30px;
+  height: 30px;
 
-    border-radius: 24px;
-    box-sizing: border-box;
+  border-radius: 24px;
+  box-sizing: border-box;
 
-    margin-left: 12px;
-    padding: 5px 20px;
-    border: 2px solid white;
-    font-size: 16px;
-    font-weight: 400;
+  margin-left: 12px;
+  padding: 5px 20px;
+  border: 2px solid white;
+  font-size: 16px;
+  font-weight: 400;
 
-    background-color: white;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
-    
-    cursor: pointer;
-    transition: border 0.2s;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(41 63 80 / 20% );
+
+  cursor: pointer;
+  transition: border 0.2s;
 }
 
 #--filtro--geral.active {
-    border: 2px solid #177BE5;
-    background-color: #177BE520;
-    box-sizing: border-box;
+  border: 2px solid #648880;
+  background-color: #293F5015;
+  box-sizing: border-box;
 }
 
 #--select--curso {
@@ -80,9 +86,12 @@ h2 {
   width: 110px;
 }
 
+#--select--sexo {
+  width: 135px;
+}
+
 .--select {
   margin-left: 12px;
-  
 }
 
 .--select--btn,
@@ -100,12 +109,14 @@ h2 {
   border-radius: 4px;
 
   background-color: white;
-  box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+  box-shadow: 1px 1px 5px rgb(41 63 80 / 20% );
+
 }
 
 .fa-angle-down {
   margin-left: 16px;
   transition: transform 0.3s linear;
+  color: #293F50;
 }
 
 .--select.active .fa-angle-down {
@@ -121,7 +132,8 @@ h2 {
   border-radius: 4px;
 
   background-color: white;
-  box-shadow: 0px 0px 5px rgb(0 0 0 / 10%);
+  box-shadow: 1px 1px 5px rgb(41 63 80 / 20% );
+
 }
 
 #--select--curso.active .--content {
@@ -129,6 +141,10 @@ h2 {
 }
 
 #--select--ano.active .--content {
+  display: block;
+}
+
+#--select--sexo.active .--content {
   display: block;
 }
 
@@ -141,9 +157,5 @@ h2 {
 
 .--options li:hover,
 li.selected {
-  background-color: #177BE520;
-}
-
-.fa-angle-down {
-    color: #808080;
+  background-color: #64888020;
 }

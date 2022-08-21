@@ -12,37 +12,48 @@
 
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
 
     <title>Início</title>
   </head>
   <body>
     <main>
       <h1>Bem-vindo(a), Fulano.</h1>
+      <!-- seção minha intenção de voto -->
       <section>
         <h2>Minha intenção de Voto</h2>
         <div></div>
       </section>
-
+      <!-- seção estatísticas -->
       <section>
         <h2>Estatísticas</h2>
         <div class="graficos">
+          <!-- gráfico filtro geral -->
           <div class="grafico" id="Geral">GRAFICO GERAL</div>
+          <!-- gráficos filtro por curso -->
           <div class="grafico" id="Eletrotécnica">GRAFICO ELETRO</div>
           <div class="grafico" id="Informática">GRAFICO INFO</div>
           <div class="grafico" id="Textil">GRAFICO TEXTIL</div>
           <div class="grafico" id="Vestuário">GRAFICO VESTU</div>
+          <!-- gráficos filtro por ano -->
           <div class="grafico" id="1º Ano">GRAFICO 1 ANO</div>
           <div class="grafico" id="2º Ano">GRAFICO 2 ANO</div>
           <div class="grafico" id="3º Ano">GRAFICO 3 ANO</div>
           <div class="grafico" id="4º Ano">GRAFICO 4 ANO</div>
+          <!-- gráficos filtro por sexo -->
+          <div class="grafico" id="Masculino">GRAFICO MASCULINO</div>
+          <div class="grafico" id="Feminino">GRAFICO FEMINIO</div>
+          <div class="grafico" id="Outros">GRAFICO OUTROS</div>
         </div>
 
         <div id="--filtros">
           <span id="--span--filtrar">Filtrar por:</span>
           <div id="--filtros--content">
-            
-            <button type="button" id="--filtro--geral" class="--tab--button">Geral</button>
-
+            <!-- filtro geral -->
+            <button type="button" id="--filtro--geral" class="--tab--button">
+              Geral
+            </button>
+            <!-- filtro por curso -->
             <div class="--select" id="--select--curso">
               <div class="--select--btn" id="--select--btn--curso">
                 <span class="--default--select">Curso</span>
@@ -52,22 +63,34 @@
                 <ul class="--options" id="--options--curso"></ul>
               </div>
             </div>
-
+            <!-- filtro por ano -->
             <div class="--select" id="--select--ano">
               <div class="--select--btn" id="--select--btn--ano">
-                <span class="--default-select" >Ano</span>
+                <span class="--default-select">Ano</span>
                 <i class="fa-solid fa-angle-down"></i>
               </div>
               <div class="--content" id="--content--ano">
                 <ul class="--options" id="--options--ano"></ul>
               </div>
             </div>
+            <!-- filtro por sexo -->
+            <div class="--select" id="--select--sexo">
+              <div class="--select--btn" id="--select--btn--sexo">
+                <span class="--default-select">Sexo</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="--content" id="--content--sexo">
+                <ul class="--options" id="--options--sexo"></ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <footer>
+        @SeridóSoft 2022
+      </footer>
     </main>
 
     <script src="./scripts/filterSelect.js"></script>
-
   </body>
 </html>
