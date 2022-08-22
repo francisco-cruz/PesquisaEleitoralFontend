@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,20 +11,23 @@
   <link rel="stylesheet" href="./styles/home.css" />
   <link rel="stylesheet" href="./styles/footer.css">
 
+  <script src="./scripts/preLoad.js"></script>
+
   <title>Início</title>
 </head>
-
-<body>
+<body onload="loading()">
+  <div id="--box--load">
+    <div id="--pre--load">
+      <img src="./assets/imagens/spinner.png" alt="spinner">
+      <span>Caregando...</span>
+    </div>
+  </div>
   <main>
     <div id="--bemvindo">
-      <h1>Bem-vindo(a), Fulano.</h1>
-      <img src="./assets/imagens/logo-governo.png" alt="logo-governo" id="--logo--governo">
+      <p>Bem-vindo(a), Fulano.</p>
     </div>
-
-    <div id="--line--header"></div>
-    <div id="--aviso">
-      <img src="./assets/imagens/doodle.png" alt="doodle" id="--doodle">
-      <p>Ano de eleição, já <b>encontrou</b> seu Título?</p>  
+    <div id="--title">
+      <h1>Pesquisa Eleitoral IFRN - Campus Caicó<h1>
     </div>
     <!-- seção minha intenção de voto -->
     <section id="--section--voto">
@@ -35,7 +37,6 @@
     <!-- seção estatísticas -->
     <section id="--section--estatistica">
       <div id="--content--estatistica">
-
         <h2>Estatísticas</h2>
         <div class="graficos">
           <!-- gráfico filtro geral -->
@@ -79,8 +80,8 @@
             <p>GR</p>
           </div>
         </div>
-
       </div>
+
       <div id="--filtros">
         <span id="--span--filtrar">Filtrar por:</span>
         <div id="--filtros--content">
@@ -119,14 +120,21 @@
             </div>
           </div>
         </div>
-    </section>
+      </section>
     </div>
+
+    <!-- ilustração -->
+    <div id="--aviso">
+      <img src="./assets/imagens/doodle.png" alt="doodle" id="--doodle">
+      <p>Ano de eleição, já <b>encontrou</b> seu Título?</p>
+    </div>
+
+    <!-- footer -->
     <footer>
       @SeridóSoft 2022
     </footer>
   </main>
-
+  
   <script src="./scripts/filterSelect.js"></script>
 </body>
-
 </html>
