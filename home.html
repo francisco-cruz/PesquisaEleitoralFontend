@@ -1,96 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script
-      src="https://kit.fontawesome.com/9f22424b2c.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
-    <link rel="stylesheet" href="./styles/footer.css">
+  <script src="https://kit.fontawesome.com/9f22424b2c.js" crossorigin="anonymous"></script>
 
-    <title>Início</title>
-  </head>
-  <body>
-    <main>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/home.css" />
+  <link rel="stylesheet" href="./styles/footer.css">
+
+  <title>Início</title>
+</head>
+
+<body>
+  <main>
+    <div id="--bemvindo">
       <h1>Bem-vindo(a), Fulano.</h1>
-      <!-- seção minha intenção de voto -->
-      <section>
-        <h2>Minha intenção de Voto</h2>
-        <div></div>
-      </section>
-      <!-- seção estatísticas -->
-      <section>
+      <img src="./assets/imagens/logo-governo.png" alt="logo-governo" id="--logo--governo">
+    </div>
+
+    <div id="--line--header"></div>
+    <div id="--aviso">
+      <img src="./assets/imagens/doodle.png" alt="doodle" id="--doodle">
+      <p>Ano de eleição, já <b>encontrou</b> seu Título?</p>  
+    </div>
+    <!-- seção minha intenção de voto -->
+    <section id="--section--voto">
+      <h2>Meu Voto</h2>
+      <div></div>
+    </section>
+    <!-- seção estatísticas -->
+    <section id="--section--estatistica">
+      <div id="--content--estatistica">
+
         <h2>Estatísticas</h2>
         <div class="graficos">
           <!-- gráfico filtro geral -->
-          <div class="grafico" id="Geral">GRAFICO GERAL</div>
+          <div class="grafico" id="Geral">
+            <p>GRAFICO GERAL</p>
+          </div>
           <!-- gráficos filtro por curso -->
-          <div class="grafico" id="Eletrotécnica">GRAFICO ELETRO</div>
-          <div class="grafico" id="Informática">GRAFICO INFO</div>
-          <div class="grafico" id="Textil">GRAFICO TEXTIL</div>
-          <div class="grafico" id="Vestuário">GRAFICO VESTU</div>
+          <div class="grafico" id="Eletrotécnica">
+            <p>GRAFICO ELETROTECNICA</p>
+          </div>
+          <div class="grafico" id="Informática">
+            <p>GRAFICO INFORMATICA</p>
+          </div>
+          <div class="grafico" id="Textil">
+            <p>GRAFICO TEXTIL</p>
+          </div>
+          <div class="grafico" id="Vestuário">
+            <p>GRAFICO VESTUARIO</p>
+          </div>
           <!-- gráficos filtro por ano -->
-          <div class="grafico" id="1º Ano">GRAFICO 1 ANO</div>
-          <div class="grafico" id="2º Ano">GRAFICO 2 ANO</div>
-          <div class="grafico" id="3º Ano">GRAFICO 3 ANO</div>
-          <div class="grafico" id="4º Ano">GRAFICO 4 ANO</div>
+          <div class="grafico" id="1º Ano">
+            <p>GRAFICO 1ANO</p>
+          </div>
+          <div class="grafico" id="2º Ano">
+            <p>GRAFICO 2ANO</p>
+          </div>
+          <div class="grafico" id="3º Ano">
+            <p>GRAFICO 3ANO</p>
+          </div>
+          <div class="grafico" id="4º Ano">
+            <p>GRAFICO 4ANO</p>
+          </div>
           <!-- gráficos filtro por sexo -->
-          <div class="grafico" id="Masculino">GRAFICO MASCULINO</div>
-          <div class="grafico" id="Feminino">GRAFICO FEMINIO</div>
-          <div class="grafico" id="Outros">GRAFICO OUTROS</div>
+          <div class="grafico" id="Masculino">
+            <p>GRAFICO MASCULINO</p>
+          </div>
+          <div class="grafico" id="Feminino">
+            <p>GRAFICO FEMININO</p>
+          </div>
+          <div class="grafico" id="Outros">
+            <p>GR</p>
+          </div>
         </div>
 
-        <div id="--filtros">
-          <span id="--span--filtrar">Filtrar por:</span>
-          <div id="--filtros--content">
-            <!-- filtro geral -->
-            <button type="button" id="--filtro--geral" class="--tab--button">
-              Geral
-            </button>
-            <!-- filtro por curso -->
-            <div class="--select" id="--select--curso">
-              <div class="--select--btn" id="--select--btn--curso">
-                <span class="--default--select">Curso</span>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="--content" id="--content--curso">
-                <ul class="--options" id="--options--curso"></ul>
-              </div>
+      </div>
+      <div id="--filtros">
+        <span id="--span--filtrar">Filtrar por:</span>
+        <div id="--filtros--content">
+          <!-- filtro geral -->
+          <button type="button" id="--filtro--geral" class="--tab--button">
+            Geral
+          </button>
+          <!-- filtro por curso -->
+          <div class="--select" id="--select--curso">
+            <div class="--select--btn" id="--select--btn--curso">
+              <span class="--default--select">Curso</span>
+              <i class="fa-solid fa-angle-down"></i>
             </div>
-            <!-- filtro por ano -->
-            <div class="--select" id="--select--ano">
-              <div class="--select--btn" id="--select--btn--ano">
-                <span class="--default-select">Ano</span>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="--content" id="--content--ano">
-                <ul class="--options" id="--options--ano"></ul>
-              </div>
+            <div class="--content" id="--content--curso">
+              <ul class="--options" id="--options--curso"></ul>
             </div>
-            <!-- filtro por sexo -->
-            <div class="--select" id="--select--sexo">
-              <div class="--select--btn" id="--select--btn--sexo">
-                <span class="--default-select">Sexo</span>
-                <i class="fa-solid fa-angle-down"></i>
-              </div>
-              <div class="--content" id="--content--sexo">
-                <ul class="--options" id="--options--sexo"></ul>
-              </div>
+          </div>
+          <!-- filtro por ano -->
+          <div class="--select" id="--select--ano">
+            <div class="--select--btn" id="--select--btn--ano">
+              <span class="--default-select">Ano</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="--content" id="--content--ano">
+              <ul class="--options" id="--options--ano"></ul>
+            </div>
+          </div>
+          <!-- filtro por sexo -->
+          <div class="--select" id="--select--sexo">
+            <div class="--select--btn" id="--select--btn--sexo">
+              <span class="--default-select">Sexo</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="--content" id="--content--sexo">
+              <ul class="--options" id="--options--sexo"></ul>
             </div>
           </div>
         </div>
-      </section>
-      <footer>
-        @SeridóSoft 2022
-      </footer>
-    </main>
+    </section>
+    </div>
+    <footer>
+      @SeridóSoft 2022
+    </footer>
+  </main>
 
-    <script src="./scripts/filterSelect.js"></script>
-  </body>
+  <script src="./scripts/filterSelect.js"></script>
+</body>
+
 </html>

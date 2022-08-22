@@ -1,33 +1,90 @@
 main {
-  margin: 32px 64px;
+  margin: 24px 64px 24px 64px;
   position: relative;
   min-height: 100vh;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(41 63 80 / 70% );
 }
 
 section {
   width: 100%;
   height: auto;
+}
+#--section--voto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#--section-estatistica {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  background-color: white;
-  box-shadow: 1px 1px 5px rgb(41 63 80 / 70% );
-
-  margin-top: 24px;
-
+#--content--estatistica{
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+#--bemvindo {
+  height: 100px;
+  background-color: white;
+  margin-left: 24px;
+  box-sizing: border-box;
 
-h1{
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#--logo--governo {
+  width: 170px;
+  margin-right: 24px;
+}
+#--line--header {
+  width:100%;
+  height: 1px;
+  background-color: #293F5025;
+}
+
+#--aviso {
+  margin-top: 64px;
+
+  display: flex;
+  justify-content: center;
+}
+
+#--aviso  p {
+  font-size: 54px;
+  width: 500px;
+  font-weight: bold;
+  margin-left: 16px;
+  color: #293F50;
+}
+
+#--aviso b {
+  color: #7FBBCA;
+  
+}
+
+#--doodle {
+  width: 300px;
+
+}
+
+h1 {
+  color: #1c1c11;
 }
 
 
 h2 {
-  margin-top: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 
-  color: #293F50 ;
+  color: #808080 ;
 
   font-weight: 400;
 }
@@ -35,7 +92,9 @@ h2 {
 #--filtros {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 24px;
+  height: 300px;
+
+  margin: 24px 0 0 32px ;
 }
 
 #--span--filtrar {
@@ -73,8 +132,8 @@ h2 {
 }
 
 #--filtro--geral.active {
-  border: 2px solid #648880;
-  background-color: #293F5015;
+  border: 2px solid #293F50;
+  background-color: #293F5020;
   box-sizing: border-box;
 }
 
@@ -157,5 +216,24 @@ h2 {
 
 .--options li:hover,
 li.selected {
-  background-color: #64888020;
+  background-color: #7FBBCA20;
+}
+
+/* estilos dos graficos */
+.graficos {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+.grafico {
+  width: 100%;
+  height: 300px;
+
+  border: 1px solid  #293F5025;
+  background-color: #293F5025;
+  color: #293F50;
+
+  display: flex;
+  justify-content: center;
+  
 }

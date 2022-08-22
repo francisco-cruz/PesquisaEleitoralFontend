@@ -2,11 +2,15 @@
 addDisplayNoneToAllSelect();
 
 let btnFiltroGeral = document.getElementById("--filtro--geral");
-console.log(btnFiltroGeral);
-btnFiltroGeral.click();
+
 btnFiltroGeral.addEventListener("click", () => {
+  // btnFiltroGeral.classList.add("active");
+  addDisplayNoneToAllSelect();
+  document.getElementById("Geral").style.display = "block";
   btnFiltroGeral.classList.add("active");
 });
+
+btnFiltroGeral.click();
 
 // Filtrar po Curso
 const selectCurso = document.querySelector("#--select--curso");
@@ -32,6 +36,8 @@ function addCursosInSelect(selectedCurso) {
 addCursosInSelect();
 
 function updateCurso(selectedList) {
+  // remover class active do botão filtro geral
+  btnFiltroGeral.classList.remove("active");
   // Função abrir gráfico
   openGraphic(event, selectedList.innerText);
   selectCurso.classList.remove("active");
@@ -63,6 +69,8 @@ function addAnosInSelect(selectedAno) {
 addAnosInSelect();
 
 function updateAno(selectedList) {
+  // remover class active do botão filtro geral
+  btnFiltroGeral.classList.remove("active");
   openGraphic(event, selectedList.innerText);
   selectAno.classList.remove("active");
   addAnosInSelect(selectedList.innerText);
@@ -89,10 +97,13 @@ function addASexosInSelect(selectedSexo) {
     optionsSexo.insertAdjacentHTML("beforeend", sexosList);
   });
 }
+
 // add lista de sexos no content
 addASexosInSelect();
 
 function updateSexo(selectedList) {
+  // remover class active do botão filtro geral
+  btnFiltroGeral.classList.remove("active");
   openGraphic(event, selectedList.innerText);
   selectSexo.classList.remove("active");
   addASexosInSelect(selectedList.innerText);
